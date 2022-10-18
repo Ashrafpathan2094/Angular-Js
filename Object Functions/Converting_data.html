@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script
+            src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+        <title>For Each</title>
+    </head>
+    <body ng-app="app" style="padding:30px;text-align:center;">
+        <div ng-controller="controller">
+            Value = {{a}}
+            <br><br>
+            <button ng-click="convertToInt()">Click to Convert</button>
+            <br><br>isNumber(value) - {{result}}
+        </div>
+        <script>
+            var myApp = angular.module("app",[]);
+            myApp.controller("controller",function($scope){
+                $scope.a="99";
+                $scope.result=angular.isNumber($scope.a);
+                $scope.convertToInt=function(){
+                    $scope.a=parseInt($scope.a);
+                    $scope.result= angular.isNumber($scope.a);    
+                    };
+            });
+        </script>
+
+        </body>
+    </html>

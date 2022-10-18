@@ -12,13 +12,15 @@
         <p> Change Color Of The Input Field:</p>
         <div ng-app="" ng-init="myCol='#c665e2'">
 
-            <input type="text" style="background-color:{{myCol}};height:20px;" ng-model="sss">
-            <input type="checkbox" style="background-color:{{myCol}};" ng-model="aaa">
+            <input type="text" style="background-color:{{myCol}};height:20px;"
+                ng-model="sss">
+            <input type="checkbox" style="background-color:{{myCol}};"
+                ng-model="aaa">
             <p> <span ng-bind="sss"></span></p>
             <p> input : {{sss}}</p>
 
 
-            
+
             <p> <span ng-bind="aaa"></span></p>
             <p> input : {{aaa}}</p>
         </div>

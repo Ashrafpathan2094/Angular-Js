@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script
+            src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+        <title>For Each</title>
+    </head>
+    <body ng-app="app" style="padding:30px">
+
+        <h2>AngularJS | angular.forEach()</h2>
+        <p>Employee Names : </p>
+        <div ng-controller="demo">
+            <div >
+                <ol ><li ng-repeat="x in names">{{x}}</li></ol>
+            </div>
+        </div>
+        <script>
+            var app = angular.module("app",[]);
+            app.controller('demo',['$scope',function($scope){
+                $scope.names=[];
+                var values = [
+                              {name:'asd'},
+                              {name:'asd1'},
+                              {name:'as1'},
+                              {name:'as12'},
+                              ];
+                angular.forEach(values,function(value,key){
+                    $scope.names.push(value.name);
+                    });
+                }]);
+        </script>
+    </body>
+</html>
